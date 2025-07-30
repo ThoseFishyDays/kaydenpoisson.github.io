@@ -10,7 +10,7 @@ body {
   background: linear-gradient(to bottom, 
     #FFB4A2 0%, 
     #E5989B 10%, 
-    #B5838D 40%, 
+    #c7909b 40%, 
     #175676 100%);
   color: #01579b;
   text-align: center;
@@ -57,7 +57,6 @@ body {
   background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,44 C300,54 500,34 800,44 C1000,54 1200,34 1200,44 L1200,60 L0,60 Z" fill="%230288d1"/></svg>');
 }
 
-/* Sun */
 .sun {
   position: fixed;
   top: 670px;
@@ -347,8 +346,8 @@ h2 {
   transition: all 0.3s ease;
   padding: 0.5rem 1rem;
   border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
+  background: radial-gradient(circle at 30% 107%, #b4b2a3 0%, #b2b2b2 5%, #919191 45%, #7d7d7d 60%, #878686 90%);
+  backdrop-filter: blur(20px);
 }
 
 .social-link:hover {
@@ -395,18 +394,26 @@ h2 {
   }
 }
 
-a{
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-  margin: 20px;
-  border: solid 2px darkcyan;
-  background-color: #00796b;
+nav a {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  margin: 1.5rem auto;
+  background: #00796b;
   color: white;
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 40px 5px 40px 5px;
+  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  transform: rotate(-2deg);
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-a:visited{
-  color: white;
+nav a:hover {
+  transform: rotate(0deg) translateY(-5px);
+  box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.2);
+  background: #0288d1;
 }
 
 a:hover{
@@ -416,4 +423,25 @@ a:hover{
 
 p{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about-section {
+  position: relative;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://www.transparenttextures.com/patterns/watercolor.png');
+  opacity: 0.1;
+  z-index: -1;
+  border-radius: 15px;
 }
